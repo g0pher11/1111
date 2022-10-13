@@ -22,6 +22,8 @@ namespace WpfApp1
         public Window3()
         {
             InitializeComponent();
+         
+            comb2.ItemsSource = Instances.db.categories.ToList();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -30,6 +32,11 @@ namespace WpfApp1
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void comb2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

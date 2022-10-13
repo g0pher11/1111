@@ -19,14 +19,26 @@
             <Label Content="по" Margin="10,0,0,0" Width="25" Height="25"/>
             <DatePicker Margin="10,0,0,0" Width="90" Height="35" />
             <Label Content="Категория:" Margin="10,0,0,0" Width="68" Height="26"/>
-            <ComboBox Margin="10,0,0,0" Width="90" Height="35"/>
-            <Button Content="Выбрать" Margin="10,0,0,0" Height="35" Width="80"/>
+            <ComboBox Name="comb1" DisplayMemberPath="category_name" Margin="10,0,0,0" Width="90" Height="35" SelectionChanged="ComboBox_SelectionChanged_1"/>
+            <Button Content="Выбрать" Margin="10,0,0,0" Height="35" Width="80" Click="Button_Click_3"/>
             <Button Content="Очистить" Margin="10,0,0,0" Height="35" Width="80"/>
             <Button Content="Отчет" Margin="10,0,0,0" Height="35" Width="80" Click="Button_Click"/>
         </StackPanel>
 
-        <DataGrid Grid.Row="1" Margin="10,10,10,10">
+        <StackPanel Grid.Row="1" Margin="0,0,0,0" >
+            <ListView x:Name="listView" Height="357" Width="780">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding price}"/>
+                            <TextBlock Text="{Binding products.product_name}"/>
+                            <TextBlock Text="{Binding products.categories.category_name}"/>
+                            
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
-        </DataGrid>
+        </StackPanel>
     </Grid>
 </Window>

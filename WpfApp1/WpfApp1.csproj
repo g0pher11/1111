@@ -82,6 +82,7 @@
     <Compile Include="categories.cs">
       <DependentUpon>Base.tt</DependentUpon>
     </Compile>
+    <Compile Include="Instances.cs" />
     <Compile Include="products.cs">
       <DependentUpon>Base.tt</DependentUpon>
     </Compile>

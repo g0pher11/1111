@@ -14,9 +14,9 @@
             <RowDefinition Height="15*"/>
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
-        <StackPanel VerticalAlignment="Center" Grid.Row="0" Orientation="Horizontal" >
+        <StackPanel  VerticalAlignment="Center" Grid.Row="0" Orientation="Horizontal" >
             <Label Content="Категория" Height="25" Width="66"  Margin="20,0,0,0"/>
-            <ComboBox Width="203" Height="21" Margin="95,0,0,0"/>
+            <ComboBox  x:Name ="comb2" DisplayMemberPath="category_name" Width="203" Height="21" Margin="95,0,0,0" SelectionChanged="comb2_SelectionChanged"/>
         </StackPanel>
         <StackPanel VerticalAlignment="Center" Grid.Row="1" Orientation="Horizontal" >
             <Label Content="Назначение платежа" Margin="20,0,0,0" Height="26" Width="125"/>
